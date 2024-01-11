@@ -1,17 +1,17 @@
 package Recursion;
 public class towerOfHanoi{
-    static void recursiveFunc(int n, char from_rod, 
-                             char to_rod, char aux_rod) 
+    static void recursiveFunc(int n, String src, 
+                             String dest, String helper) 
     { 
         if (n == 0) return;
-        recursiveFunc(n - 1, from_rod, aux_rod, to_rod); 
+        recursiveFunc(n - 1, src, dest, helper); 
         System.out.println("Move disk " + n + " from rod "
-                           + from_rod + " to rod "
-                           + to_rod); 
-        recursiveFunc(n - 1, aux_rod, to_rod, from_rod); 
+                           + src + " to rod "
+                           + dest); 
+        recursiveFunc(n - 1, helper, dest, src); 
     } 
     public static void main(String args[]){
         int n = 3;
-        recursiveFunc(n, 's', 'd', 'h');
+        recursiveFunc(n,"src", "dest", "helper");
     }
 }
