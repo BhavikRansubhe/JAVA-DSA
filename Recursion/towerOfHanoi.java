@@ -4,7 +4,7 @@ public class towerOfHanoi{
                              String dest, String helper) 
     { 
         if (n == 0) return;
-        recursiveFunc(n - 1, src, dest, helper); 
+        recursiveFunc(n - 1, src, helper, dest); 
         System.out.println("Move disk " + n + " from rod "
                            + src + " to rod "
                            + dest); 
